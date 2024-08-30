@@ -43,23 +43,6 @@ As part of BioHackathon 2024, we here report on our analysis of tools reviewed b
 It was nice to see that “Triple Stores” and SPARQL technology implementations and developments for the community are ongoing and that progressively useful and performant and scalable/reliable, open-source software is being implemented.
 
 
-## High Level Characteristics that determine data quality.
- 
-The quality of data is crucial for its integration, exploitation and usability. Here are some key characteristics that determine “Data Quality” in general and contribute to its value:
-
-1. Accuracy: Data should correctly represent the real-world values or events it is intended to model. Inaccurate data can lead to incorrect conclusions and decisions.
-2. Completeness: All necessary data should be present. Missing data can result in incomplete analysis and insights.
-3. Consistency: Data should be consistent across different datasets and systems. Inconsistent data can cause confusion and errors.
-4. Relevance: Data should be relevant to the context and purpose for which it is used. Irrelevant data can clutter analysis and obscure important insights.
-5. Reliability: Data should be trustworthy and dependable. Reliable data ensures that the information can be used confidently for decision-making.
-6. Validity: Data should conform to the defined rules and constraints. Invalid data can lead to errors and inconsistencies.
-7. Granularity: Data should be detailed enough to meet the needs of the analysis. Granular data allows for more precise and meaningful insights.
-8. Accessibility: Data should be easily accessible to those who need it, without unnecessary barriers.
-9. Timeliness: Data should be up-to-date and available when needed. Outdated data can be irrelevant and misleading.
-10. Uniqueness: Data should be free from duplicates. Duplicate data can skew analysis and lead to incorrect conclusions.
-
-
-These were the characteristics to be considered to ensure that data is valuable, reliable, and useful for making informed decisions and deriving meaningful insights.
 
 ## Integration Report: Implementing the QLever Semantic Web Framework
 
@@ -129,15 +112,19 @@ Overview of Tools
 
 #### QLever
 Purpose and Core Components:
+
 - Designed to efficiently index and query large knowledge graphs, supporting both SPARQL and text search.
 - Optimized SPARQL engine capable of handling large datasets and complex queries.
 - Integrates text search capabilities for combined queries on knowledge bases and text corpora.
 Technical Specifications:
+
 - Implemented in C++, requiring a 64-bit system and Docker for deployment.
 - Uses advanced indexing techniques for efficient query processing.
+
 Advantages:
 - High scalability, capable of indexing over 100 billion triples on standard hardware.
 - Fast setup and deployment with Docker support.
+
 Disadvantages:
 - Requires significant RAM for very large datasets.
 - Complexity in configuration may require technical expertise.
@@ -146,12 +133,15 @@ Disadvantages:
 Purpose and Core Components:
 - Acts as a middleware translating GraphQL queries into SPARQL queries.
 - Provides a GraphQL endpoint that wraps around SPARQL endpoints.
+
 Technical Specifications:
 - Written in TypeScript, leveraging Node.js.
 - Requires configuration of GraphQL schemas and SPARQL templates.
+
 Advantages:
 - Combines the flexibility of GraphQL with the power of SPARQL.
 - Supports complex nested queries and distributed query processing.
+
 Disadvantages:
 - Requires detailed schema definitions for accurate query translation.
 - May involve overhead in translating and executing queries.
@@ -160,12 +150,15 @@ Disadvantages:
 Purpose and Core Components:
 - Comprehensive resource for protein sequence and functional information.
 - Utilizes RDF triple stores and relational databases for data management.
+
 Technical Specifications:
 - Supports SPARQL for querying RDF data and RESTful APIs for integration.
 - Employs manual curation and automated annotation pipelines.
+
 Advantages:
 - Extensive data integration with over 120 external databases.
 - High data accuracy and comprehensiveness due to manual curation.
+
 Disadvantages:
 - Complexity in managing and querying vast amounts of data.
 - Potential performance issues with very large datasets.
@@ -174,12 +167,15 @@ Disadvantages:
 Purpose and Core Components:
 - REST API server for executing SPARQL queries and transforming results.
 - Uses SPARQLet configurations for defining queries and transformations.
+
 Technical Specifications:
 - Implemented in Node.js, with configurations managed via environment variables.
 - Supports content negotiation for various output formats.
+
 Advantages:
 - Simplifies integration of semantic data into web applications.
 - Provides a web interface for managing and executing queries.
+
 Disadvantages:
 - Limited to the capabilities of the underlying SPARQL endpoints.
 - Requires configuration of SPARQLets for each query.
@@ -205,34 +201,45 @@ In summary, each tool offers unique strengths tailored to specific use cases. QL
 The UniProt Knowledgebase (UniProtKB) is a comprehensive resource for protein sequence and functional information. Here are some key technical details about its infrastructure and systems:
 
 UniProtKB Structure
+
 1.  Sections:
 -   UniProtKB/Swiss-Prot: Manually annotated and reviewed entries.
 -   UniProtKB/TrEMBL: Automatically annotated entries awaiting manual review.
+
 Data Storage and Management
+
 1.  Data Volume:
 -   UniProtKB contains billions of triples, with manually reviewed (Swiss-Prot) and unreviewed (TrEMBL) entries.
 3.  Data Integration:
 -   Can be used in Integration with data from over 120 external databases, providing extensive cross-references.
+
 Technical Infrastructure
+
 1.  Database Systems:
 -   Utilizes relational database management systems (RDBMS) for structured data storage.
 -   Employs distributed computing resources to handle large-scale data processing and storage.
 2.  Annotation Systems:
 -   Combines manual curation with automated annotation pipelines to ensure data accuracy and comprehensiveness.
+
 Query and Access Systems
+
 1.  User Interfaces:
 -   Provides web-based interfaces for querying and accessing data.
 -   Supports various data formats for download, including FASTA, XML, and RDF.
 2.  APIs:
 -   Offers RESTful APIs for programmatic access to data, enabling integration with other bioinformatics tools and databases.
+
 Data Formats and Standards
+
 1.  Common Data Exchange Formats:
 -   Promotes the use of standardized data formats to facilitate data sharing and integration.
 2.  Provenance Tracking:
 -   Ensures all data is attributed to its original source, allowing users to trace the origin of information.
 
 The UniProt Knowledgebase (UniProtKB) employs a sophisticated framework and technical infrastructure to manage and query its vast amount of data. Here are some detailed insights into the framework, engines, triple store, and querying system used:
+
 Framework and Technical Infrastructure
+
 1.  Framework:
 -   UniProtKB uses a combination of relational databases and RDF (Resource Description Framework) triple stores to manage its data1.
 -   The RDF framework is particularly useful for representing complex relationships between data points in a graph format.
@@ -269,6 +276,7 @@ Data Access and Integration
 The DBCLS GRASP tool is designed to bridge GraphQL and SPARQL, providing a seamless way to query RDF data using GraphQL. Here are some technical details about its specifications and infrastructure:
 
 Framework and Infrastructure
+
 1. Purpose:
 -   GRASP (GraphQL-SPARQL) acts as a middleware that translates GraphQL queries into SPARQL queries, allowing users to leverage the flexibility of GraphQL while querying RDF data.
 2. Core Components:
@@ -276,6 +284,7 @@ Framework and Infrastructure
 -   SPARQL Endpoint: The tool interacts with SPARQL endpoints to fetch data based on the translated queries.
 
 Technical Specifications
+
 1. Programming Language:
 -   GRASP is primarily written in TypeScript, leveraging Node.js for its runtime environment.
 2. Dependencies:
@@ -285,6 +294,7 @@ Technical Specifications
 -   Configuration files include details like SPARQL endpoint URLs and query templates.
 
 Query Systems
+
 1. Query Translation:
 -   GRASP translates GraphQL queries into SPARQL queries using predefined templates and schema definitions.
 -   This translation ensures that the queries are optimized for the underlying SPARQL endpoints.
@@ -293,12 +303,14 @@ Query Systems
 -   Results are then reformatted to match the original GraphQL query structure before being returned to the client.
 
 Deployment and Usage
+
 1. Running Locally:
 -   GRASP can be run locally using Node.js. Users can clone the repository, install dependencies, and start the server.
 2. Docker Support:
 -   GRASP can also be deployed using Docker, providing an easy way to manage dependencies and environment configurations.
 
 Integration and Extensibility
+
 1. GraphQL Schema:
 -   Users can extend the GraphQL schema to include new types and queries, making it highly customizable1.
 -   The schema definitions include metadata and SPARQL query templates to ensure compatibility with the GraphQL specification1.
@@ -308,11 +320,13 @@ Integration and Extensibility
 GRASP (GraphQL-SPARQL) handles complex GraphQL queries by translating them into SPARQL queries, leveraging its robust framework and schema definitions.
 
 Handling Complex GraphQL Queries
+
 1. Query Translation:
 2. Schema Definitions:
 3. Nested Queries:
 4. Query Optimization:
 5. Distributed Query Processing:
+
 [By leveraging these mechanisms, GRASP ensures that even the most complex GraphQL queries are handled efficiently and accurately [1](https://github.com/dbcls/grasp).
 
 
@@ -321,6 +335,7 @@ Handling Complex GraphQL Queries
 The DBCLS SPARQList tool is a REST API server designed to execute SPARQL queries, transform the results into various formats, and return them to web client applications. Here are the technical details and infrastructure specifications:
 
 Framework and Infrastructure
+
 1. Purpose:
 -   SPARQList provides a way to create and manage REST APIs for SPARQL queries, making it easier to integrate semantic data into web applications.
 2. Core Components:
@@ -328,6 +343,7 @@ Framework and Infrastructure
 -   REST API Server: Executes SPARQL queries and transforms the results based on the SPARQLet configuration.
 
 Technical Specifications
+
 1. Programming Language:
 -   SPARQList is implemented in Node.js, leveraging its asynchronous capabilities for efficient query handling1.
 2. Dependencies:
@@ -340,6 +356,7 @@ Technical Specifications
 -   [ROOT_PATH: Path of the root directory for deployment1](https://github.com/dbcls/sparqlist).
 
 Query Systems
+
 1. SPARQLet Configuration:
 -   SPARQLet configurations are written in Markdown, specifying API parameters, SPARQL endpoints, SPARQL queries, and JavaScript functions for data transformation [2](https://ceur-ws.org/Vol-2042/paper47.pdf).
 2. Execution and Transformation:
@@ -352,13 +369,15 @@ Query Systems
 QLever is a highly efficient SPARQL engine designed to handle very large knowledge graphs, such as the complete Wikidata. Here are the technical details and infrastructure specifications:
 
 Framework and Infrastructure
+
 1. Purpose:
 -   QLever is designed to efficiently index and query large knowledge graphs, supporting both SPARQL and text search1.
 2. Core Components:
 -   SPARQL Engine: Optimized for handling large datasets and complex queries.
 -   Text Search Integration: Allows combined search on knowledge bases and text corpora [2](https://github.com/Buchhold/QLever).
--   
+ 
 Technical Specifications
+
 1. Programming Language:
 -   QLever is implemented in C++, leveraging its performance capabilities for efficient query processing.
 2. Dependencies:
@@ -367,6 +386,7 @@ Technical Specifications
 -   Configurations are managed via a QLeverfile, which centralizes all settings and parameters.
 
 Query Systems
+
 1. SPARQL and Text Search:
 -   QLever extends SPARQL with specific predicates like ql:contains-entity and ql:contains-word for combined SPARQL and text search [3](https://ad-publications.informatik.uni-freiburg.de/CIKM_qlever_BB_2017.pdf).
 -   Supports context-sensitive autocompletion for SPARQL queries, enhancing user experience.
@@ -375,6 +395,7 @@ Query Systems
 -   Uses efficient algorithms to handle large intermediate and final results.
 
 Storage and Indexing
+
 1. Data Storage:
 -   Capable of indexing knowledge graphs with over 100 billion triples on a single standard PC or server1.
 -   Uses about 40 GB of RAM for very large datasets like the full Wikidata (7 billion triples) [2](https://github.com/Buchhold/QLever).
@@ -383,12 +404,14 @@ Storage and Indexing
 -   Supports incremental indexing to handle updates efficiently1.
 
 Deployment and Usage
+
 1. Running Locally:
 -   QLever can be run locally using Docker. Users can clone the repository, build the Docker image, and start the server [2](https://github.com/Buchhold/QLever).
 2. Docker Support:
 -   Docker simplifies the deployment process, ensuring that all dependencies and configurations are managed consistently [2](https://github.com/Buchhold/QLever).
 
 Integration and Extensibility
+
 1. APIs and Tools:
 -   Provides RESTful APIs for integration with other tools and systems, enhancing its utility in various data workflows.
 2. Web Interface:
@@ -401,6 +424,7 @@ Integration and Extensibility
 ## High Level Characteristics that determine data quality.
  
 The quality of data is crucial for its integration, exploitation and usability. Here are some key characteristics that determine “Data Quality” in general and contribute to its value:
+
 1. Accuracy: Data should correctly represent the real-world values or events it is intended to model. Inaccurate data can lead to incorrect conclusions and decisions.
 2. Completeness: All necessary data should be present. Missing data can result in incomplete analysis and insights.
 3. Consistency: Data should be consistent across different datasets and systems. Inconsistent data can cause confusion and errors.
