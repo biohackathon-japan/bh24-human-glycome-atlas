@@ -51,23 +51,23 @@ A “new” pleasant surprise SemWeb framework: Qlever. Glad to see that “Trip
 To see possible alignment and application in HGA Project TOHSA Infrastructure core.
  
 #### Day 1: August 26
-1. Item 1 Meeting with Qlever Developer: We began by meeting Hanna Bast, mastermind behind project and developers of Qlever, to discuss the framework's capabilities and potential applications.
-2. Item 2 Infrastructure Planning: We brainstormed ideas for options related to our Big  HGA project infrastructure requirements that align with Qlever's strengths.
-3. Item 3 Data Assessment: We reviewed our internal data to identify a suitable starting point for integration.
-4. Item 4 Preparation for Testing: Plans were made to test the Qlever framework with our data in the coming days, focusing on system functionalities, performances, and data quality and format check.
+1. Meeting with Qlever Developer: We began by meeting Hanna Bast, mastermind behind project and developers of Qlever, to discuss the framework's capabilities and potential applications.
+2. Infrastructure Planning: We brainstormed ideas for options related to our Big  HGA project infrastructure requirements that align with Qlever's strengths.
+3. Data Assessment: We reviewed our internal data to identify a suitable starting point for integration.
+4. Preparation for Testing: Plans were made to test the Qlever framework with our data in the coming days, focusing on system functionalities, performances, and data quality and format check.
  
 The GlyCosmos data (our initial core test use-case) presented challenges due to its little disorganized state, as seen in the list of files and datasets available on some data dumps. Hanna worked on resolving RDF validation issues to facilitate data uploading and testing on the Qlever server. We aimed to compare data querying using Qlever against the existing GlyCosmos SPARQL portal interface. Tools like Apache Jena's command-line utilities (e.g., riot, rdfcompare, tdbloader, and sparql) were employed to address RDF syntax issues. Hanna successfully deployed the restructured GlyCosmos data on their test Qlever servers. The default configuration file for setting up data uploads and initiating a Qlever instance is available on GitHub.
 Hanna test deployment of “re-arranged glycosmos data” in their test qlever servers  https://qlever.cs.uni-freiburg.de/glycosmos 
 
 
 #### Day 2: August 27
-A. Local Setup on macOS: We installed and configured Qlever on a local test machine running macOS. The installation process required adjustments for different operating systems and environments. Initially challenging, the setup was eventually successful.
-B. GlyCosmos Configuration Issues: We encountered issues with the TTL file configuration for GlyCosmos, leading to backend connectivity problems. These were resolved through online research.
-C. Backend Integration: We explored running another backend and connecting it to the Qlever UI. This involved configuring files and settings to ensure seamless integration between the backend and frontend frameworks.
+1. Local Setup on macOS: We installed and configured Qlever on a local test machine running macOS. The installation process required adjustments for different operating systems and environments. Initially challenging, the setup was eventually successful.
+2. GlyCosmos Configuration Issues: We encountered issues with the TTL file configuration for GlyCosmos, leading to backend connectivity problems. These were resolved through online research.
+3. Backend Integration: We explored running another backend and connecting it to the Qlever UI. This involved configuring files and settings to ensure seamless integration between the backend and frontend frameworks.
 
 #### Day 3: August 28
-A. MassBank-RDF Integration: We successfully integrated another RDF backend, MassBank-RDF, into the local Qlever UI.
-B. GlyCosmos Deployment Challenges: Despite efforts to deploy a bundle of GlyCosmos TTL files, we faced deployment issues. However, deploying a single TTL file was successful, demonstrating progress in the integration process.
+1. MassBank-RDF Integration: We successfully integrated another RDF backend, MassBank-RDF, into the local Qlever UI.
+2. GlyCosmos Deployment Challenges: Despite efforts to deploy a bundle of GlyCosmos TTL files, we faced deployment issues. However, deploying a single TTL file was successful, demonstrating progress in the integration process.
 
 #### Day 4: August 29
 Data Extraction and Validation: The "Tohsa" extracted data presented validation challenges, with some TTL files lacking clear schema and model definitions. Additionally, Qlever's limitations with named graphs required consideration.
