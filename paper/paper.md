@@ -18,9 +18,9 @@ authors:
     orcid: 0000-0000-0000-0000
     affiliation: 1, 2
 affiliations:
-  - name: 1Glycan and Life Systems Integration Center (GalSIC), Soka University, Hachioji, Japan
+  - name: Glycan and Life Systems Integration Center (GalSIC), Soka University, Hachioji, Japan
     index: 1
-  - name: 6Institute for Glyco-Core Research (iGCORE), Nagoya University, Nagoya, Japan
+  - name: Institute for Glyco-Core Research (iGCORE), Nagoya University, Nagoya, Japan
     index: 2
 date: 30 August 2024
 cito-bibliography: paper.bib
