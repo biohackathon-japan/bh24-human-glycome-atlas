@@ -50,7 +50,7 @@ Some details of the integration process of the Qlever framework, a promising Sem
 A “new” pleasant surprise SemWeb framework: Qlever. Glad to see that “Triple Stores” and SPARQL technologies implementations and developments for The Community are still alive and actually someone is now trying to make something useful and performant and scalable/reliable, open-source...
 To see possible alignment and application in HGA Project TOHSA Infrastructure core.
  
-Day 1: August 26
+#### Day 1: August 26
 1. Meeting with Qlever Developer: We began by meeting Hanna Bast, mastermind behind project and developers of Qlever, to discuss the framework's capabilities and potential applications.
 2. Infrastructure Planning: We brainstormed ideas for options related to our Big  HGA project infrastructure requirements that align with Qlever's strengths.
 3. Data Assessment: We reviewed our internal data to identify a suitable starting point for integration.
@@ -60,19 +60,19 @@ The GlyCosmos data (our initial core test use-case) presented challenges due to 
 Hanna test deployment of “re-arranged glycosmos data” in their test qlever servers  https://qlever.cs.uni-freiburg.de/glycosmos 
 
 
-Day 2: August 27
+#### Day 2: August 27
 A. Local Setup on macOS: We installed and configured Qlever on a local test machine running macOS. The installation process required adjustments for different operating systems and environments. Initially challenging, the setup was eventually successful.
 B. GlyCosmos Configuration Issues: We encountered issues with the TTL file configuration for GlyCosmos, leading to backend connectivity problems. These were resolved through online research.
 C. Backend Integration: We explored running another backend and connecting it to the Qlever UI. This involved configuring files and settings to ensure seamless integration between the backend and frontend frameworks.
 
-Day 3: August 28
+#### Day 3: August 28
 A. MassBank-RDF Integration: We successfully integrated another RDF backend, MassBank-RDF, into the local Qlever UI.
 B. GlyCosmos Deployment Challenges: Despite efforts to deploy a bundle of GlyCosmos TTL files, we faced deployment issues. However, deploying a single TTL file was successful, demonstrating progress in the integration process.
 
-Day 4: August 29
+#### Day 4: August 29
 Data Extraction and Validation: The "Tohsa" extracted data presented validation challenges, with some TTL files lacking clear schema and model definitions. Additionally, Qlever's limitations with named graphs required consideration.
  
-Day 5: August 30
+#### Day 5: August 30
 Deploying the Tohsa dataset in the QLever query engine and testing it with sample queries is a significant step in leveraging large-scale semantic data for meaningful insights. Tohsa, a comprehensive dataset, can encompass various types of biomedical or health-related information, making it an ideal candidate for analysis using SPARQL queries in QLever.
 QLever, known for its efficiency in handling complex queries on RDF data, allows researchers to explore and manipulate the TOHSA dataset by executing precise SPARQL queries. For example, a sample query might involve extracting relationships between specific genes and their associated proteins, or identifying connections between different biochemical pathways.
 ![Test SPARQL Query](./Screenshot46.png)
@@ -89,12 +89,13 @@ In conclusion, the integration of the Qlever framework has been a learning exper
 ## Qlever Experience
 
 Qlever is a SPARQL query engine that distinguishes itself through its scalability and reliability, particularly when compared to other SPARQL technologies. Here are some key aspects of how Qlever compares:
-“Scalability for a use-case”
+
+#### “Scalability”
 Performance on Large Datasets: Qlever has demonstrated quite encouraging performance on large datasets. For instance, in a benchmark test involving complex SPARQL queries, Qlever was able to outperform other state-of-the-art query engines such as RDF-3X and Virtuoso. It was noted for its ability to handle large datasets efficiently, where other systems struggled to index the data in a reasonable time frame
 Efficient Query Processing: Qlever is designed to handle both pure SPARQL queries and SPARQL+Text queries efficiently. It provides fast query times by using a knowledge-base index with added redundancy, which, although increases index size, significantly improves query speed. This design choice allows Qlever to maintain competitive performance across various query types
 Memory and Resource Management: Efforts have been made to reduce Qlever's memory footprint, which is crucial for running it on large datasets like Wikidata. This optimization allows Qlever to be set up on consumer-grade hardware, enhancing its scalability for broader applications
  
-Reliability
+#### Reliability
 Robust Query Execution: Qlever's architecture supports reliable execution of complex queries, which is a challenge for many SPARQL engines. Its ability to consistently deliver results even for computationally intensive queries speaks to its reliability
 Handling of Text and SPARQL Queries: Qlever's support for SPARQL+Text queries is a unique feature that enhances its reliability in applications requiring both structured and unstructured data retrieval. This capability allows it to serve diverse query needs without compromising performance
 Adaptability to Different Workloads: The engine is designed to adapt to different workloads, maintaining its performance characteristics despite varying demands. This adaptability is a key factor in its reliability, ensuring consistent service levels across different use cases
@@ -111,7 +112,7 @@ This section provides a some general analysis of several Semantic Web tools, foc
 
 Overview of Tools
 
-Qlever
+#### Qlever
 Purpose and Core Components:
 Designed to efficiently index and query large knowledge graphs, supporting both SPARQL and text search.
 Optimized SPARQL engine capable of handling large datasets and complex queries.
@@ -126,7 +127,7 @@ Disadvantages:
 Requires significant RAM for very large datasets.
 Complexity in configuration may require technical expertise.
 
-GRASP
+#### GRASP
 Purpose and Core Components:
 Acts as a middleware translating GraphQL queries into SPARQL queries.
 Provides a GraphQL endpoint that wraps around SPARQL endpoints.
@@ -140,7 +141,7 @@ Disadvantages:
 Requires detailed schema definitions for accurate query translation.
 May involve overhead in translating and executing queries.
 
-UniProtKB
+#### UniProtKB
 Purpose and Core Components:
 Comprehensive resource for protein sequence and functional information.
 Utilizes RDF triple stores and relational databases for data management.
@@ -154,7 +155,7 @@ Disadvantages:
 Complexity in managing and querying vast amounts of data.
 Potential performance issues with very large datasets.
 
-SPARQList
+#### SPARQList
 Purpose and Core Components:
 REST API server for executing SPARQL queries and transforming results.
 Uses SPARQLet configurations for defining queries and transformations.
@@ -169,7 +170,7 @@ Limited to the capabilities of the underlying SPARQL endpoints.
 Requires configuration of SPARQLets for each query.
 
 
-General Comparative Analysis
+### General Comparative Analysis
 
 | Feature/Tool | Qlever | GRASP | UniProtKB | SPARQList |
 | -------- | -------- | -------- | -------- | -------- |
