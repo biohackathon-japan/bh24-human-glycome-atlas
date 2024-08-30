@@ -43,6 +43,21 @@ As part of BioHackathon 2024, we here report on our analysis of tools reviewed b
 It was nice to see that “Triple Stores” and SPARQL technology implementations and developments for the community are ongoing and that progressively useful and performant and scalable/reliable, open-source software is being implemented.
 
 
+## High Level Characteristics that determine data quality.
+ 
+The quality of data is crucial for its integration, exploitation and usability. Here are some key characteristics that determine “Data Quality” in general and contribute to its value:
+1. Accuracy: Data should correctly represent the real-world values or events it is intended to model. Inaccurate data can lead to incorrect conclusions and decisions.
+2. Completeness: All necessary data should be present. Missing data can result in incomplete analysis and insights.
+3. Consistency: Data should be consistent across different datasets and systems. Inconsistent data can cause confusion and errors.
+4. Relevance: Data should be relevant to the context and purpose for which it is used. Irrelevant data can clutter analysis and obscure important insights.
+5. Reliability: Data should be trustworthy and dependable. Reliable data ensures that the information can be used confidently for decision-making.
+6. Validity: Data should conform to the defined rules and constraints. Invalid data can lead to errors and inconsistencies.
+7. Granularity: Data should be detailed enough to meet the needs of the analysis. Granular data allows for more precise and meaningful insights.
+8. Accessibility: Data should be easily accessible to those who need it, without unnecessary barriers.
+9. Timeliness: Data should be up-to-date and available when needed. Outdated data can be irrelevant and misleading.
+10. Uniqueness: Data should be free from duplicates. Duplicate data can skew analysis and lead to incorrect conclusions.
+ 
+These were the characteristics to be considered to ensure that data is valuable, reliable, and useful for making informed decisions and deriving meaningful insights.
 
 ## Integration Report: Implementing the QLever Semantic Web Framework
 
