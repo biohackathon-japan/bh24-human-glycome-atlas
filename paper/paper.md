@@ -189,7 +189,7 @@ Disadvantages:
 | Reliability | Robust query execution | Reliable with schema definitions | High, due also to manual curation | Reliable, but endpoint-dependent |
 | Ease of Use | Requires technical expertise | User-friendly for GraphQL users | Complex, requires domain knowledge | User-friendly web interface |
 | Integration | RESTful APIs, Docker support | GraphQL-SPARQL integration | Extensive database integration and federation | RESTful APIs for web applications |
-| Setup| Quick with Docker, complex config | Requires schema setups | Extensive data | Simple with Node.js, Docker |
+| Setup| Quick with Docker, complex config | Requires schema setups | Virtuoso!, Custom Middleware, Extensive data | Simple with Node.js, Docker |
 
 
 In summary, each tool offers unique strengths tailored to specific use cases. QLever excels in handling large datasets with efficient query processing, making it ideal for extensive knowledge graphs. GRASP provides a flexible approach by combining GraphQL with SPARQL, suitable for users familiar with GraphQL. UniProtKB offers comprehensive and accurate biological data, though it requires significant management effort. SPARQList simplifies the integration of semantic data into web applications with its REST API approach. The choice of tool depends on the specific requirements of scalability, ease of use, and integration capabilities.
