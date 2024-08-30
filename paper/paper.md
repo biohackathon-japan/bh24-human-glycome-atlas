@@ -252,50 +252,50 @@ Data Access and Integration
 The DBCLS GRASP tool is designed to bridge GraphQL and SPARQL, providing a seamless way to query RDF data using GraphQL. Here are some technical details about its specifications and infrastructure:
 
 Framework and Infrastructure
-1.  Purpose:
+1. Purpose:
 -   GRASP (GraphQL-SPARQL) acts as a middleware that translates GraphQL queries into SPARQL queries, allowing users to leverage the flexibility of GraphQL while querying RDF data.
-2.  Core Components:
+2. Core Components:
 -   GraphQL Endpoint: GRASP provides a GraphQL endpoint that wraps around SPARQL endpoints.
 -   SPARQL Endpoint: The tool interacts with SPARQL endpoints to fetch data based on the translated queries.
 
 Technical Specifications
-1.  Programming Language:
+1. Programming Language:
 -   GRASP is primarily written in TypeScript, leveraging Node.js for its runtime environment.
-2.  Dependencies:
+2. Dependencies:
 -   Requires Node.js (version 14 or later) and various npm packages for its operation.
-3.  Configuration:
+3. Configuration:
 -   Users need to define a GraphQL schema with specific notations to map GraphQL types to SPARQL queries.
 -   Configuration files include details like SPARQL endpoint URLs and query templates.
 
 Query Systems
-1.  Query Translation:
+1. Query Translation:
 -   GRASP translates GraphQL queries into SPARQL queries using predefined templates and schema definitions.
 -   This translation ensures that the queries are optimized for the underlying SPARQL endpoints.
-2.  Execution and Results:
+2. Execution and Results:
 -   The translated SPARQL queries are executed against the SPARQL endpoints.
 -   Results are then reformatted to match the original GraphQL query structure before being returned to the client.
 
 Deployment and Usage
-1.  Running Locally:
+1. Running Locally:
 -   GRASP can be run locally using Node.js. Users can clone the repository, install dependencies, and start the server.
-2.  Docker Support:
+2. Docker Support:
 -   GRASP can also be deployed using Docker, providing an easy way to manage dependencies and environment configurations.
 
 Integration and Extensibility
-1.  GraphQL Schema:
+1. GraphQL Schema:
 -   Users can extend the GraphQL schema to include new types and queries, making it highly customizable1.
 -   The schema definitions include metadata and SPARQL query templates to ensure compatibility with the GraphQL specification1.
-2.  APIs and Tools:
+2. APIs and Tools:
 -   GRASP provides RESTful APIs for integration with other tools and systems, enhancing its utility in various bioinformatics workflows.
 
 GRASP (GraphQL-SPARQL) handles complex GraphQL queries by translating them into SPARQL queries, leveraging its robust framework and schema definitions.
 
 Handling Complex GraphQL Queries
-1.  Query Translation:
-2.  Schema Definitions:
-3.  Nested Queries:
-4.  Query Optimization:
-5.  Distributed Query Processing:
+1. Query Translation:
+2. Schema Definitions:
+3. Nested Queries:
+4. Query Optimization:
+5. Distributed Query Processing:
 [By leveraging these mechanisms, GRASP ensures that even the most complex GraphQL queries are handled efficiently and accurately [1](https://github.com/dbcls/grasp).
 
 
@@ -304,18 +304,18 @@ Handling Complex GraphQL Queries
 The DBCLS SPARQList tool is a REST API server designed to execute SPARQL queries, transform the results into various formats, and return them to web client applications. Here are the technical details and infrastructure specifications:
 
 Framework and Infrastructure
-1.  Purpose:
+1. Purpose:
 -   SPARQList provides a way to create and manage REST APIs for SPARQL queries, making it easier to integrate semantic data into web applications.
-2.  Core Components:
+2. Core Components:
 -   SPARQLet: A configuration unit that defines SPARQL queries, endpoints, and data transformation rules using Markdown1.
 -   REST API Server: Executes SPARQL queries and transforms the results based on the SPARQLet configuration.
 
 Technical Specifications
-1.  Programming Language:
+1. Programming Language:
 -   SPARQList is implemented in Node.js, leveraging its asynchronous capabilities for efficient query handling1.
-2.  Dependencies:
+2. Dependencies:
 -   Requires Node.js (version 20.11.1 or later) and various npm packages for its operation1.
-3.  Configuration:
+3. Configuration:
 -   All configurations are done using environment variables. Key variables include:
 -   PORT: Port to listen on (default: 3000).
 -   REPOSITORY_PATH: Path to the SPARQLet repository.
@@ -323,9 +323,9 @@ Technical Specifications
 -   [ROOT_PATH: Path of the root directory for deployment1](https://github.com/dbcls/sparqlist).
 
 Query Systems
-1.  SPARQLet Configuration:
+1. SPARQLet Configuration:
 -   SPARQLet configurations are written in Markdown, specifying API parameters, SPARQL endpoints, SPARQL queries, and JavaScript functions for data transformation [2](https://ceur-ws.org/Vol-2042/paper47.pdf).
-2.  Execution and Transformation:
+2. Execution and Transformation:
 -   SPARQList executes the SPARQL queries defined in the SPARQLet and transforms the results using JavaScript functions specified in the configuration [2](https://ceur-ws.org/Vol-2042/paper47.pdf).
 -   Supports content negotiation to return results in various formats like JSON, HTML, or plain text [2](https://ceur-ws.org/Vol-2042/paper47.pdf).
 
@@ -335,46 +335,46 @@ Query Systems
 QLever is a highly efficient SPARQL engine designed to handle very large knowledge graphs, such as the complete Wikidata. Here are the technical details and infrastructure specifications:
 
 Framework and Infrastructure
-1.  Purpose:
+1. Purpose:
 -   QLever is designed to efficiently index and query large knowledge graphs, supporting both SPARQL and text search1.
-2.  Core Components:
+2. Core Components:
 -   SPARQL Engine: Optimized for handling large datasets and complex queries.
 -   Text Search Integration: Allows combined search on knowledge bases and text corpora [2](https://github.com/Buchhold/QLever).
 -   
 Technical Specifications
-1.  Programming Language:
+1. Programming Language:
 -   QLever is implemented in C++, leveraging its performance capabilities for efficient query processing.
-2.  Dependencies:
+2. Dependencies:
 -   Requires a 64-bit system and Docker for easy deployment and management [2](https://github.com/Buchhold/QLever).
-3.  Configuration:
+3. Configuration:
 -   Configurations are managed via a QLeverfile, which centralizes all settings and parameters.
 
 Query Systems
-1.  SPARQL and Text Search:
+1. SPARQL and Text Search:
 -   QLever extends SPARQL with specific predicates like ql:contains-entity and ql:contains-word for combined SPARQL and text search [3](https://ad-publications.informatik.uni-freiburg.de/CIKM_qlever_BB_2017.pdf).
 -   Supports context-sensitive autocompletion for SPARQL queries, enhancing user experience.
-2.  Query Optimization:
+2. Query Optimization:
 -   Employs advanced indexing techniques to speed up query processing.
 -   Uses efficient algorithms to handle large intermediate and final results.
 
 Storage and Indexing
-1.  Data Storage:
+1. Data Storage:
 -   Capable of indexing knowledge graphs with over 100 billion triples on a single standard PC or server1.
 -   Uses about 40 GB of RAM for very large datasets like the full Wikidata (7 billion triples) [2](https://github.com/Buchhold/QLever).
-2.  Indexing:
+2. Indexing:
 -   Builds indices in less than 12 hours, ensuring quick setup and deployment [2](https://github.com/Buchhold/QLever).
 -   Supports incremental indexing to handle updates efficiently1.
 
 Deployment and Usage
-1.  Running Locally:
+1. Running Locally:
 -   QLever can be run locally using Docker. Users can clone the repository, build the Docker image, and start the server [2](https://github.com/Buchhold/QLever).
-2.  Docker Support:
+2. Docker Support:
 -   Docker simplifies the deployment process, ensuring that all dependencies and configurations are managed consistently [2](https://github.com/Buchhold/QLever).
 
 Integration and Extensibility
-1.  APIs and Tools:
+1. APIs and Tools:
 -   Provides RESTful APIs for integration with other tools and systems, enhancing its utility in various data workflows.
-2.  Web Interface:
+2. Web Interface:
 -   Includes a web interface for managing and executing queries, making it user-friendly.
 
 
@@ -384,16 +384,16 @@ Integration and Extensibility
 ## High Level Characteristics that determine data quality.
  
 The quality of data is crucial for its integration, exploitation and usability. Here are some key characteristics that determine “Data Quality” in general and contribute to its value:
-Accuracy: Data should correctly represent the real-world values or events it is intended to model. Inaccurate data can lead to incorrect conclusions and decisions.
-Completeness: All necessary data should be present. Missing data can result in incomplete analysis and insights.
-Consistency: Data should be consistent across different datasets and systems. Inconsistent data can cause confusion and errors.
-Relevance: Data should be relevant to the context and purpose for which it is used. Irrelevant data can clutter analysis and obscure important insights.
-Reliability: Data should be trustworthy and dependable. Reliable data ensures that the information can be used confidently for decision-making.
-Validity: Data should conform to the defined rules and constraints. Invalid data can lead to errors and inconsistencies.
-Granularity: Data should be detailed enough to meet the needs of the analysis. Granular data allows for more precise and meaningful insights.
-Accessibility: Data should be easily accessible to those who need it, without unnecessary barriers.
-Timeliness: Data should be up-to-date and available when needed. Outdated data can be irrelevant and misleading.
-Uniqueness: Data should be free from duplicates. Duplicate data can skew analysis and lead to incorrect conclusions.
+1. Accuracy: Data should correctly represent the real-world values or events it is intended to model. Inaccurate data can lead to incorrect conclusions and decisions.
+2. Completeness: All necessary data should be present. Missing data can result in incomplete analysis and insights.
+3. Consistency: Data should be consistent across different datasets and systems. Inconsistent data can cause confusion and errors.
+4. Relevance: Data should be relevant to the context and purpose for which it is used. Irrelevant data can clutter analysis and obscure important insights.
+5. Reliability: Data should be trustworthy and dependable. Reliable data ensures that the information can be used confidently for decision-making.
+6. Validity: Data should conform to the defined rules and constraints. Invalid data can lead to errors and inconsistencies.
+7. Granularity: Data should be detailed enough to meet the needs of the analysis. Granular data allows for more precise and meaningful insights.
+8. Accessibility: Data should be easily accessible to those who need it, without unnecessary barriers.
+9. Timeliness: Data should be up-to-date and available when needed. Outdated data can be irrelevant and misleading.
+10. Uniqueness: Data should be free from duplicates. Duplicate data can skew analysis and lead to incorrect conclusions.
  
 These were the characteristics to be considered to ensure that data is valuable, reliable, and useful for making informed decisions and deriving meaningful insights.
 
