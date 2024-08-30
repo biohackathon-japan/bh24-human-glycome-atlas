@@ -39,7 +39,7 @@ authors_short: First Author \emph{et al.}
 
 # Introduction
 
-As part of the BioHackathon Europe 2023, we here report on the experiences of the integration process of the Qlever framework, a promising Semantic Web tool for handling "Triple Stores" and SPARQL technologies in the scope of creting a reliable and performant Semantic Knowledge-Base (Infrastructure and Portal) called TOHSA for the Human Glycome Project. Qlever highlights the ongoing relevance and potential of these technologies to deliver scalable and reliable solutions.
+As part of the BioHackathon 2024, we here report on the experiences of the integration process of the Qlever framework, a promising Semantic Web tool for handling "Triple Stores" and SPARQL technologies in the scope of creting a reliable and performant Semantic Knowledge-Base (Infrastructure and Portal) called TOHSA for the Human Glycome Project. Qlever highlights the ongoing relevance and potential of these technologies to deliver scalable and reliable solutions.
 A “new” pleasant surprise SemWeb framework: Qlever. Glad to see that “Triple Stores” and SPARQL technologies implementations and developments for The Community are still alive and actually someone is now trying to make something useful and performant and scalable/reliable, open-source.
 
 
