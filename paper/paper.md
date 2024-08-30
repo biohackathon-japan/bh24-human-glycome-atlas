@@ -74,7 +74,7 @@ Data Extraction and Validation: We obtained a smaller dataset called "Tohsa" whi
 Deploying the Tohsa dataset in the QLever query engine and testing it with sample queries was a significant step in leveraging large-scale semantic data for meaningful insights. Tohsa, a comprehensive dataset, can encompass various types of biomedical and health-related information, making it an ideal candidate for analysis using SPARQL queries in QLever.
 QLever, known for its efficiency in handling complex queries on RDF data, allows researchers to explore and manipulate the TOHSA dataset by executing precise SPARQL queries. For example, a sample query might involve extracting relationships between specific genes and their associated proteins, or identifying connections between different biochemical pathways.
 ![Test SPARQL Query](./Screenshot46.png)
-After executing this query, we could obtain the results below in 84ms.
+After executing this query, we could obtain the results below very quickly.
 
 ![Results of the Query](./Screenshot09.png)
 QLever can be used to analyze SPARQL queries using graphs, providing a powerful way to visualize and understand complex data relationships. QLever is designed to efficiently handle large RDF datasets and enables users to perform advanced SPARQL queries to extract meaningful insights from the data. By combining QLever with graph visualization tools, users can turn the results of these queries into visual graphs that represent the relationships between different entities in the dataset.
@@ -443,7 +443,7 @@ These were the characteristics to be considered to ensure that data is valuable,
 
 ## Acknowledgements
 
-...
+This work was done during the BioHackathon 2024 organized by NBDC/DBCLS in August 2024 in Fukushima, Japan. We thank the organizers for the opportunity and the support. We acknowledge the HGA Human Glycome Atlas project funded by Japan Government (MEST) under devolopment by consortium with Glycan and Life Systems Integration Center GalSIC, Soka University, Institute for Glyco-Core Research iGCORE, National Institute of Natural Science NINS, Excells Research Center, Tokai  Research System.
 
 ## References
 
